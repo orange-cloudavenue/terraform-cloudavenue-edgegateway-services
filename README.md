@@ -39,14 +39,14 @@ module "services" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.0 |
-| <a name="requirement_cloudavenue"></a> [cloudavenue](#requirement\_cloudavenue) | >=0.31.0 |
+| <a name="requirement_cloudavenue"></a> [cloudavenue](#requirement\_cloudavenue) | >=0.32.0 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_edge_gateway_id"></a> [edge\_gateway\_id](#input\_edge\_gateway\_id) | The ID of the edge gateway to which the services will be attached. | `string` | n/a | yes |
-| <a name="input_firewall"></a> [firewall](#input\_firewall) | The firewall mode for the edge gateway. Can be `bypass`, `ignore`, or `create`. `bypass` means that the firewall is bypassed. `ignore` means that the firewall rules are ignored. `create` means that the firewall rule is created for each services *(create is not implemented yet)*. | `string` | `"bypass"` | no |
+| <a name="input_firewall"></a> [firewall](#input\_firewall) | The firewall mode for the edge gateway. It can be set to `bypass`, `ignore`, or `create`. `bypass` means that the NAT rule doesn't need firewall rules: firewall is bypassed. `ignore` means that the NAT rules are created and the firewall rules are not. `create` means that the NAT and firewall rules are created for each services *(create is not implemented yet)*. | `string` | `"bypass"` | no |
 | <a name="input_services"></a> [services](#input\_services) | A map of services to be enabled. The keys are the service names and the values are booleans indicating whether the service is enabled or not. | ```object({ administration = optional(bool) s3 = optional(bool) })``` | ```{ "administration": true, "s3": true }``` | no |
 
 ## Resources

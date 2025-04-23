@@ -44,4 +44,4 @@ tasks:
       - cmd: |
           brew tap {{.APP}} --quiet && \
             echo "✅ {{.APP}} tapped successfully" || \
-            echo "❌ Failed to tap {{.APP}} not tapped"
+            echo "❌ Failed to tap {{.APP}}"

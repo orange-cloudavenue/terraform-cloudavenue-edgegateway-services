@@ -7,7 +7,7 @@ variable "edge_gateway_id" {
 variable "firewall" {
   type        = string
   default     = "bypass"
-  description = "The firewall mode for the edge gateway. Can be `bypass`, `ignore`, or `create`. `bypass` means that the firewall is bypassed. `ignore` means that the firewall rules are ignored. `create` means that the firewall rule is created for each services *(create is not implemented yet)*."
+  description = "The firewall mode for the edge gateway. It can be set to `bypass`, `ignore`, or `create`. `bypass` means that the NAT rule doesn't need firewall rules: firewall is bypassed. `ignore` means that the NAT rules are created and the firewall rules are not. `create` means that the NAT and firewall rules are created for each services *(create is not implemented yet)*."
   validation {
     condition     = alltrue([contains(["bypass", "ignore"], var.firewall)]) // TODO : add create
     error_message = "The firewall must be set to bypass or ignore."
