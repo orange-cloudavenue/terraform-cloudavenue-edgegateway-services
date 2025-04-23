@@ -1,0 +1,23 @@
+#cloud-config
+
+# Get VMware metadata
+disable_vmware_customization: false
+
+# disable root login
+ssh:
+  emit_keys_to_console: false
+
+# create users
+users:
+  - name: ${user}
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ${ssh_key}
+
+# By default, the fingerprints of the authorized keys for the users
+# cloud-init adds are printed to the console. Setting
+# no_ssh_fingerprints to true suppresses this output.
+no_ssh_fingerprints: false
+
+timezone: Europe/Paris
