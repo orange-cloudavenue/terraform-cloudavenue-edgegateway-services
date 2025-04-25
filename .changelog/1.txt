@@ -1,0 +1,3 @@
+```release-note:feature
+`Module` - Create a new module EdgeGateway services. This module provides a set of resources to manage EdgeGateway services in a cloud environment.
+```
