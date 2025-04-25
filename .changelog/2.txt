@@ -1,0 +1,3 @@
+```release-note:note
+Add end-to-end testing
+```
