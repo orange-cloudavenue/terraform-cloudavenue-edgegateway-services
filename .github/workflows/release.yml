@@ -27,7 +27,8 @@ jobs:
 
 
   tag:
-needs: [pre-check]    
+    needs: [pre-check]
+
     name: Tag
     uses: orange-cloudavenue/workflows/.github/workflows/tag_create-tag.yml@main
     with:
