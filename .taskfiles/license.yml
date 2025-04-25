@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://taskfile.dev/schema.json
 version: "3"
 
-includes:
+includes: 
   internal: internal.yml
 
 tasks:
@@ -44,8 +44,8 @@ tasks:
         vars:
           APP: '{{.ITEM}}'
 
-  # * Actions
-  run:
+  # * Actions 
+  run: 
     desc: Run license actions
     cmds:
       - for: [
@@ -61,6 +61,6 @@ tasks:
       - sh: command -v license-eye
         msg: "license-eye is not installed. Please run `task license:install`"
       - sh: test -f .licenserc.yaml
-        msg: "No .licenserc.yaml file found."
+        msg: "No .licenserc.yaml file found.`"
     cmds:
       - license-eye header fix

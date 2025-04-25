@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://taskfile.dev/schema.json
 version: "3"
 
-includes:
+includes: 
   internal: internal.yml
 
 # Lints
@@ -55,8 +55,8 @@ tasks:
         vars:
           APP: '{{.ITEM}}'
 
-  # * Actions
-  run:
+  # * Actions 
+  run: 
     desc: Run golang actions
     cmds:
       - for: [
