@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright (c) 2025 Orange
+# SPDX-FileCopyrightText: Copyright (c) 2026 Orange
 # SPDX-License-Identifier: Mozilla Public License 2.0
 #
 # This software is distributed under the MPL-2.0 license.
